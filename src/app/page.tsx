@@ -34,35 +34,37 @@ const resources = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      <main className="py-12" role="main" aria-label="AI Programming Resources">
+      <main className="py-8 sm:py-12" role="main" aria-label="TraeDocs AI Programming Resources">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <header className="text-center" role="banner">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-gray-900 dark:text-white">AI Programming Resources</span>
-              <span className="mt-2 block text-2xl sm:text-3xl text-gray-600 dark:text-gray-400">AI编程资源导航</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <span className="text-gray-900 dark:text-white inline-block">TraeDocs</span>
+              <span className="mt-2 block text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400">AI Programming Knowledge Hub</span>
             </h1>
-            <div className="mt-6 space-y-2">
-              <p className="text-lg leading-8 text-gray-900 dark:text-white">Curated AI programming articles to help developers better leverage AI tools for improved productivity</p>
-              <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">精选优质AI编程相关文章，助力开发者更好地利用AI工具提升开发效率</p>
+            <div className="mt-4 sm:mt-6 space-y-2">
+              <p className="text-base sm:text-lg leading-7 sm:leading-8 text-gray-900 dark:text-white px-4">Your trusted hub for AI programming resources, curated by Trae</p>
+              <p className="text-sm leading-6 text-gray-500 dark:text-gray-400 px-4">精选优质AI编程相关文章，助力开发者更好地利用AI工具提升开发效率</p>
             </div>
           </header>
 
-          <nav className="mt-16" role="navigation" aria-label="Resource navigation">
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <nav className="mt-10 sm:mt-16" role="navigation" aria-label="Resource navigation">
+            <ul className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
               {resources.map((resource, index) => (
-                <li key={index}>
+                <li key={index} className="px-2 sm:px-0">
                   <a
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900 hover:shadow-md transition-all duration-200 hover:scale-[1.02]"
+                    className="group block rounded-lg border border-gray-200 bg-white p-4 sm:p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900 hover:shadow-md transition-all duration-200 hover:scale-[1.02]"
                     aria-label={`${resource.titleEn} - ${resource.title}`}
                   >
                     <article>
-                      <div className="space-y-1.5">
-                        <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{resource.titleEn}</h2>
-                        <div className="text-sm text-gray-500 dark:text-gray-400">{resource.title}</div>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">{resource.description}</p>
+                      <div className="space-y-2 sm:space-y-1.5">
+                        <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                          {resource.titleEn}
+                        </h2>
+                        <div className="text-sm text-gray-500 dark:text-gray-400 line-clamp-1">{resource.title}</div>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 hidden sm:block">{resource.description}</p>
                       </div>
                       <div className="mt-2 text-xs text-gray-400 dark:text-gray-500 truncate">{resource.url}</div>
                     </article>
@@ -72,10 +74,13 @@ export default function Home() {
             </ul>
           </nav>
 
-          <footer className="mt-20 text-center" role="contentinfo">
-            <div className="mx-auto max-w-2xl text-sm">
-              <p className="text-gray-600 dark:text-gray-400">Disclaimer: All articles are linked to their original sources. The content belongs to respective authors and platforms.</p>
-              <p className="mt-1 text-gray-500 dark:text-gray-500">免责声明：所有文章均链接到原始来源，内容归属原作者和平台所有</p>
+          <footer className="mt-12 sm:mt-20 text-center" role="contentinfo">
+            <div className="mx-auto max-w-2xl text-sm px-4">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                Disclaimer: All articles are linked to their original sources. Content belongs to respective authors and platforms.
+              </p>
+              <p className="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-500">免责声明：所有文章均链接到原始来源，内容归属原作者和平台所有</p>
+              <p className="mt-4 text-xs text-gray-400 dark:text-gray-500">© 2024 TraeDocs. Curated with ❤️ by Trae</p>
             </div>
           </footer>
         </div>

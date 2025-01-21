@@ -6,22 +6,38 @@ import Providers from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TraeDocs - AI Programming Resources',
-  description: 'Curated collection of high-quality AI programming articles and resources to help developers leverage AI tools effectively | AI编程资源导航，精选优质AI编程相关文章',
-  keywords: 'AI Programming, ChatGPT, Cursor, AI Tools, Programming Resources, AI Development, 编程资源, AI开发',
-  authors: [{ name: 'TraeDocs Team' }],
+  metadataBase: new URL('https://traedocs.com'),
+  title: {
+    template: '%s | TraeDocs',
+    default: 'TraeDocs - The AI Programming Knowledge Hub',
+  },
+  description: 'TraeDocs: Your trusted hub for AI programming resources. Curated by Trae, featuring high-quality articles and guides for AI-powered development.',
+  keywords: 'TraeDocs, Trae, AI Programming Hub, AI Development Resources, Trae AI Resources, AI Programming Guide, TraeDocs Resources',
+  authors: [{ name: 'Trae Team' }],
+  creator: 'Trae',
+  publisher: 'TraeDocs',
   openGraph: {
-    title: 'TraeDocs - AI Programming Resources',
-    description: 'Curated collection of high-quality AI programming articles and resources',
+    title: 'TraeDocs - The AI Programming Knowledge Hub',
+    description: 'TraeDocs: Your trusted hub for AI programming resources by Trae',
     url: 'https://traedocs.com',
     siteName: 'TraeDocs',
     locale: 'en-US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TraeDocs - AI Programming Resources',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TraeDocs - AI Programming Resources',
-    description: 'Curated collection of high-quality AI programming articles and resources',
+    title: 'TraeDocs - The AI Programming Knowledge Hub',
+    description: 'TraeDocs: Your trusted hub for AI programming resources by Trae',
+    creator: '@TraeDocs',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -36,6 +52,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://traedocs.com',
+  },
+  verification: {
+    google: 'google-site-verification-code', // 需要替换为实际的验证码
   },
 }
 
