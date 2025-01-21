@@ -1,0 +1,5 @@
+[AI 编程蓝皮书](https://superhuang.feishu.cn)
+[8 个 ChatGPT 使用技巧，带你从入门到精通](https://mp.weixin.qq.com/s/7EbiQpDoJep3apArn5lyrw)
+[一文读懂 Cursor 与 WindSurf 的代码索引逻辑](https://mp.weixin.qq.com/s/Fl-K-tdRuhlT9I-bcLbtdg)
+[AI 编码平台上的必备最佳实践](https://www.reddit.com/r/aipromptprogramming/comments/1hzpvsl/essential_best_practices_mustdo_on_ai_coding/)
+[Cursor directory](https://cursor.directory/)

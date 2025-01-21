@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@heroicons/react':
+        specifier: ^2.0.18
+        version: 2.2.0(react@18.3.1)
       next:
         specifier: 13.5.8
         version: 13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-themes:
+        specifier: ^0.2.1
+        version: 0.2.1(next@13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18
         version: 18.3.1
@@ -69,6 +75,11 @@ packages:
   '@eslint/js@8.57.1':
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@heroicons/react@2.2.0':
+    resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
+    peerDependencies:
+      react: '>= 16 || ^19.0.0-rc'
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -1071,6 +1082,13 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
+  next-themes@0.2.1:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+
   next@13.5.8:
     resolution: {integrity: sha512-VlR7FaXpSibCs7ujOqStaDFTGSdX/NvWgLDcd47oiHUe8i63ZtNkX9intgcYAu/MxpaeEGinHaMB5mwxuzglKw==}
     engines: {node: '>=16.14.0'}
@@ -1628,6 +1646,10 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.1': {}
+
+  '@heroicons/react@2.2.0(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -2799,6 +2821,12 @@ snapshots:
   nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
+
+  next-themes@0.2.1(next@13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      next: 13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   next@13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
